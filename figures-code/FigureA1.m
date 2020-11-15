@@ -1,9 +1,9 @@
-%Plots figure Appendix 1
+% Plots figure Appendix 1
 
-%current directory
+% current directory
 cd('C:\')
 
-%Loads the data
+% Loads the data
 data = xlsread('MATLAB_TA_S_input');
 Sal_TRACERS = data(:,1);
 TA_TRACERS = data(:,2);
@@ -17,10 +17,10 @@ TA_JGOFS = data(:,8);
 x = [33.4, 34, 34.7];
 y = [2263.852, 2305.199, 2353.437];
 
-%sets the panel
+% sets the panel
 axes('Position',[0.3, 0.15, 0.45, 0.8])
 
-%plots the data
+% plots the data
 scatter(Sal_TRACERS,TA_TRACERS,100,'markerfacecolor','b','MarkerEdgeColor','k')
 hold on
 scatter(Sal_Bates_Nov,TA_Bates_Nov,100,'markerfacecolor','g','MarkerEdgeColor','k')
@@ -32,7 +32,7 @@ hold on
 plot(x,y,'color','k', 'linewidth',3)
 hold on
 
-%formats the plot
+% formats the plot
 set(gca,'fontsize',18)
 ylim([2240 2360])
 xlim([33.2 35])
