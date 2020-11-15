@@ -1,6 +1,6 @@
 % Plots each panel for Figure 1
 
-cd('C:\Users\hansb\Desktop\1. Ocean acidification paper\OA figures\m_map_fig1_2_7')
+cd(' ')
 
 %Loads the sea ice data
 Dec1_ice = double(hdfread('asi-AMSR2-s6250-20121201-v5.hdf', 'ASI Ice Concentration'));
@@ -62,7 +62,7 @@ set(gca,'FontSize',20)
 m_text(193,-70.5,'ice cover [%]','fontsize',30, 'horizontalalignment',...
     'right')
 
-%----------------------------------------------------
+%------------------------------------------------------------------------
 %salinity
 m_proj('stereographic','lat',-75,'long',180,'radius',6.5,'rec','on')
 
