@@ -1,6 +1,6 @@
 % Plots Figure 2 maps
 
-cd('C:\Users\hansb\Desktop\1. Ocean acidification paper\OA figures\m_map_fig1_2_7')
+cd('C:\')
 
 %reads the data
 A=xlsread('Station_map_Ar.xlsx');
@@ -30,7 +30,7 @@ m_scatter(stat_lon,stat_lat,50,'MarkerEdgeColor','k',...
               'LineWidth',.5)
 m_tbase('contour',[-1001:1:-1000],'edgecolor','b','linewidth',1);
 m_text(157,-78.5,'a','FontSize',20)
-%----------------------------------------------------
+%-----------------------------------------------------------------------
 %Plots the cruise track from Antarctica to Punta Arenas
 axes('Position',[0.45, 0.5, 0.3, 0.4])
 
@@ -51,4 +51,4 @@ m_scatter(SO4P_long,SO4P_lat,3,'MarkerEdgeColor','r',...
 m_tbase('contour',[-1001:1:-1000],'edgecolor','b',...
    'linewidth',1);
 m_text(150,-70,'b','FontSize',20)
-%----------------------------------------------
+%-------------------------------------------------------------------
