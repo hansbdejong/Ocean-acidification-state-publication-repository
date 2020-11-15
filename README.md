@@ -7,13 +7,13 @@ All of the figures were made using MATLAB. Many of the figures contain maps. We 
 
 ## Data Wrangling and carbon system calculations and crosschecks
 
-This publication focuses on ocean acidification state measurements conducted on surface waters in the Ross Sea (Antarctica) and Southern Ocean. Temperature (T) and salinity (S) were measured continuously through sensors and were binned into 1 minute intervals. pCO2 was measured around every 3 minutes and total alkalinity (TA) was measured around every 24 minutes. We then used these measurements to calculate other parameters, most notably the saturation state of aragonite (Omega_Ar).
+This publication focuses on ocean acidification state measurements conducted on surface waters in the Ross Sea (Antarctica) and Southern Ocean. Temperature (T) and salinity (S) were measured continuously through sensors and were binned into 1 minute intervals. pCO2 was measured around every 3 minutes and total alkalinity (TA) was measured around every 24 minutes. We use these measurements to calculate other parameters, most notably the saturation state of aragonite (Omega_Ar).
 
-The first step was to produce a tidy dataset with all variables (T, S, TA, and pCO2). We used a timestamp (yyyyMMddHHmm) to merge these datasets with TA (measured the least frequently). 
+We produce a tidy dataset with all variables (T, S, TA, and pCO2). We use a timestamp (yyyyMMddHHmm) to merge these datasets with TA (measured the least frequently). 
 
 ### pCO2_interpolate.m
 
-Interpolates the pCO2 data (collected every 3 minutes) into minute bins using linear interpolation. We then used VLOOKUP in excel to merge T, S, and pCO2 with TA.
+Interpolates the pCO2 data (collected every 3 minutes) into minute bins using linear interpolation. We use VLOOKUP in Excel to merge T, S, and pCO2 with TA.
 
 ### pH_extraction.m
 
