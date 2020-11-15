@@ -1,7 +1,7 @@
 %Plots Figure 5
 
 %changes directory
-cd('C:\Users\hansb\Desktop\1. Ocean acidification paper\OA figures\SO_Graphs_fig_4_5_6 ')
+cd('C:\')
 
 % import data
 A=xlsread('Controls_SO_graph');
