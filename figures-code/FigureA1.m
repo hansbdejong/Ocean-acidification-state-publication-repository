@@ -1,7 +1,7 @@
 %Plots figure Appendix 1
 
 %current directory
-cd('C:\Users\hansb\Desktop\1. Ocean acidification paper\OA figures\m_map_fig1_2_7')
+cd('C:\')
 
 %Loads the data
 data = xlsread('MATLAB_TA_S_input');
