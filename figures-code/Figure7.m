@@ -1,6 +1,6 @@
-%Plots Figure 7 - Omega from early spring cruises
+% Plots Figure 7 - Omega from early spring cruises
 
-%change as appropriate
+% change as appropriate
 cd('C:\')
 
 %--------------------------------------------------------------------------
@@ -10,17 +10,17 @@ cd('C:\')
 axes('Position',[0.15, 0.5, 0.35, 0.4])
 
 %loads the data
-A=xlsread('Lat_Long_november_pCO2.xlsx');
+A = xlsread('Lat_Long_november_pCO2.xlsx');
 
-Lat_94=A(:,2);
-Lat_97=A(:,10);
-Lat_05=A(:,18);
-Lat_06=A(:,22);
+Lat_94 = A(:,2);
+Lat_97 = A(:,10);
+Lat_05 = A(:,18);
+Lat_06 = A(:,22);
 
-Long_94=A(:,3);
-Long_97=A(:,11);
-Long_05=A(:,19);
-Long_06=A(:,23);
+Long_94 = A(:,3);
+Long_97 = A(:,11);
+Long_05 = A(:,19);
+Long_06 = A(:,23);
 
 %plots the data on the map
 m_proj('stereographic','lat',-75,'long',180,'radius',6,'rec','on')
@@ -48,16 +48,16 @@ m_text(190, -71,'a','fontsize',20)
 axes('Position',[0.5, 0.5, 0.25, 0.4])
 
 %loads the data
-data=xlsread('MASTER_November');
-Date_94=data(:,1);
-Date_97=data(:,9);
-Date_05=data(:,17);
-Date_06=data(:,21);
+data = xlsread('MASTER_November');
+Date_94 = data(:,1);
+Date_97 = data(:,9);
+Date_05 = data(:,17);
+Date_06 = data(:,21);
 
-Omega_94=data(:,4); 
-Omega_97=data(:,12); 
-Omega_05=data(:,20);
-Omega_06=data(:,24); 
+Omega_94 = data(:,4); 
+Omega_97 = data(:,12); 
+Omega_05 = data(:,20);
+Omega_06 = data(:,24); 
 
 %plots the data
 plot(Date_94,Omega_94,'ob', 'markerfacecolor','b', 'markersize', 3)
