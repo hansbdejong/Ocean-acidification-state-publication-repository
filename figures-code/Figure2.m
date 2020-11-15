@@ -3,16 +3,16 @@
 cd('C:\')
 
 %reads the data
-A=xlsread('Station_map_Ar.xlsx');
-B=xlsread('Station_map_SO4P.xlsx');
-stat_lat=A(:,2);
-stat_lon=A(:,3);
-SO4P_lat=B(:,3);
-SO4P_long=B(:,2);
+A = xlsread('Station_map_Ar.xlsx');
+B = xlsread('Station_map_SO4P.xlsx');
+stat_lat = A(:,2);
+stat_lon = A(:,3);
+SO4P_lat = B(:,3);
+SO4P_long = B(:,2);
 
-cruise_track=xlsread('track_cruise.xlsx');
-lat_cruise_track=cruise_track(:,3);
-lon_cruise_track=cruise_track(:,2);
+cruise_track = xlsread('track_cruise.xlsx');
+lat_cruise_track = cruise_track(:,3);
+lon_cruise_track = cruise_track(:,2);
 %--------------------------------------------------------------------
 %plots the station data from the Ross Sea
 axes('Position',[0.2, 0.5, 0.35, 0.4])
