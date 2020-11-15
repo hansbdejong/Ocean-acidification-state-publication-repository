@@ -1,7 +1,7 @@
 %Plots Figure 7 - Omega from early spring cruises
 
 %change as appropriate
-cd('C:\Users\hansb\Desktop\1. Ocean acidification paper\OA figures\m_map_fig1_2_7')
+cd('C:\')
 
 %--------------------------------------------------------------------------
 %Panel A
