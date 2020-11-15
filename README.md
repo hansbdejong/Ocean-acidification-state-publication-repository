@@ -13,7 +13,7 @@ We produce a tidy dataset with all variables (T, S, TA, and pCO2). We use a time
 Interpolates the pCO2 data (collected every 3 minutes) into minute bins using linear interpolation. We use VLOOKUP in Excel to merge T, S, and pCO2 with TA.
 
 ### pH_extraction.m
-As a means of internal quality control, we use the initial pH reading from the TA titration as a third carbon system parameter to crosscheck the accuracy of our Omega_Ar estimates. The script pH_extraction outputs the initial pH reading from each individual raw TA titration file for the crosscheck calculations.
+As a means of internal quality control, we use the initial pH reading from the TA titration as a third carbon system parameter to crosscheck the accuracy of our Omega_Ar estimates. The script pH_extraction outputs the initial pH reading from each individual raw TA titration file.
 
 ### Omega_calculator.m
 We calculate Omega_Ar and Dissolved Inorganic Carbon (DIC) for underway samples with CO2SYS for MATLAB (Lewis and Wallace, 1998; van Heuven et al., 2011 - https://cdiac.ess-dive.lbl.gov/ftp/co2sys/CO2SYS_calc_MATLAB_v1.1/) with TA, pCO2, SST, and salinity as input variables. This script also crosschecks the accuracy of our Omega_Ar estimates using pH. 
@@ -34,13 +34,10 @@ We use the same approach to evaluate the relative importance of DIC, TA, tempera
 ### Nov_omega_calculator.m
 To calculate Omega_Ar from early spring surface waters, we use the LDEO pCO2 measurements from November 1994, 1997, 2005, and 2006 that are from the
 Ross Shelf (defined by the 1000m isopleth) and are south of 74 degrees S. We calculate wintertime TA in the Ross Sea by establishing
-a salinity–TA relationship using data from Bates et al. (1998), Sweeney et al. (2000b), and our own hydrocast TA measurements from the upper 10m. We calculate historical Omega_Ar using historical pCO2 measurements, salinity-derived TA, SST, and salinity. Phosphate and silicate are set to the winter values of 2.1 and 79 μmol kg􀀀1, respectively.
+a salinity–TA relationship using data from Bates et al. (1998), Sweeney et al. (2000b), and our own hydrocast TA measurements from the upper 10m. We calculate historical Omega_Ar using historical pCO2 measurements, salinity-derived TA, SST, and salinity. Phosphate and silicate are set to the winter values of 2.1 and 79 μmol kg-1, respectively.
 
 ### Error_analysis_omega_from_salinity.m
 The TSG salinity data from the historical pCO2 measurements appear reasonable and are uncalibrated. While the largest offset in TSG salinity compared with Autosal measurements is 0.3, such error is not typical. To test the possible impact of a poor salinity calibration, we recalculate Omega_Ar for all pCO2 measurements after increasing salinity by 0.3.
 
 ### RCP8point5_projection.m
 Following McNeil et al. (2010) and a Representative Concentration Pathway (RCP8.5) scenario (Meinshausen et al., 2011), we use the lowest Omega_Ar values from 2006 (Omega_Ar = 1.20, pCO2 = 428 μatm, TA = 2328 μmol kg-1, salinity = 34.33, SSTD = 1.87 degrees C, phosphate = 2.1 μmol kg-1, silicate = 79 μmol kg-1) to assess when the Ross Sea could become corrosive to aragonite.
-
-
-
