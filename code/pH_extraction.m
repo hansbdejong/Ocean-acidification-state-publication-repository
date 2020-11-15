@@ -1,3 +1,5 @@
+% Extracts the initial pH measurement from the TA measurement raw data files
+
 dir_content = dir('C:\Users\hansb\Desktop\1. Ocean acidification paper\UW data\pH from TA\UW TA pH4\*SIL*');
 
 % contains all the raw TA files (1 excel file per measurement)
@@ -17,7 +19,3 @@ for i = 1: length(A)
     output(i,1) = sample_pH;
     output(i,2) = sample_temp;
 end
-
-
-
-
