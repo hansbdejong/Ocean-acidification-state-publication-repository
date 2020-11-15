@@ -1,16 +1,16 @@
-%Plots Figure 5
+% Plots Figure 5
 
-%changes directory
+% changes directory
 cd('C:\')
 
 % import data
-A=xlsread('Controls_SO_graph');
-lat=A(:,1);
-delta_omega=A(:,6);
-omega_T=A(:,2);
-omega_DIC=A(:,3);
-omega_TA=A(:,4);
-omega_S=A(:,5);
+A = xlsread('Controls_SO_graph');
+lat = A(:,1);
+delta_omega = A(:,6);
+omega_T = A(:,2);
+omega_DIC = A(:,3);
+omega_TA = A(:,4);
+omega_S = A(:,5);
 
 %% adds the polar front lines
 axes('Position',[0.25, 0.1, 0.5, 0.8])
@@ -73,9 +73,9 @@ ylim([-0.4 1.2])
 %% Adds Plot B
 
 %imports data 
-B=xlsread('Omega_sDIC_SO');
-TA_DIC=B(:,8);
-TA_DIC_lat=B(:,2);
+B = xlsread('Omega_sDIC_SO');
+TA_DIC = B(:,8);
+TA_DIC_lat = B(:,2);
 
 %plots data
 axes('Position',[0.25, 0.1, 0.5, 0.3875])
@@ -108,4 +108,3 @@ text(-57,1.08,'SAF-N','fontsize',13,'horizontalalignment','center',...
 %Final plot axis labels
 ylabel('TA:DIC', 'fontsize',15)
 xlabel('Latitude [ ^{\circ}S]', 'fontsize',15)
-
