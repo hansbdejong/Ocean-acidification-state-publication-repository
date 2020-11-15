@@ -1,9 +1,9 @@
 %Plots Figure 3
 
 axes('Position',[0.25, 0.4, 0.5, 0.5])
-deltas=[0.57, 0.525, 0.108, 0.001, -0.012, -0.002]
+deltas = [0.57, 0.525, 0.108, 0.001, -0.012, -0.002]
 %sDIC, sTA, T, S_total, pTA
-SD=[0.19, 0.180, 0.063, 0.002, 0.005, 0.046]
+SD = [0.19, 0.180, 0.063, 0.002, 0.005, 0.046]
 
 %bar graph
 bar(0.6, deltas(1),'facecolor', [0.7 0.7 0.7])
@@ -44,8 +44,7 @@ text(6,-0.15,'-0.002 \pm 0.046' ,'fontsize',12,'horizontalalignment','center')
 text(1.1,0.97,'Decomposition of \Delta\Omega_{Ar} from winter', 'fontsize',20)
 
 %plots division line between total and carbon system components
-X=[1.3 1.3]
+X = [1.3 1.3]
 Y = [-0.2 0.9]
 hold on
 plot(X,Y, '--k', 'linewidth', 2)
-
