@@ -1,8 +1,3 @@
-dir_content = dir('C:\Users\hansb\Desktop\1. Ocean acidification paper\UW data\Interpolate')
-A = xlsread('interpolate');
-xkept = A(1:length(A),1);
-ykept = A(1:length(A),2);
-
 %{
     
 pCO2 is measured every 3 minutes. In order to link a pCO2 measurement
@@ -22,6 +17,10 @@ measurement (44204 minutes)
     
 %}
 
+cd('C:\')
+A = xlsread('interpolate');
+xkept = A(1:length(A),1);
+ykept = A(1:length(A),2);
 number = (1:44204);
 
 %This function does the linear interpolation
