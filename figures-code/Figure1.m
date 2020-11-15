@@ -11,8 +11,8 @@ lat_ice = double(hdfread('LongitudeLatitudeGrid-s6250-Antarctic.hdf', 'Latitudes
 feb = double(hdfread('A20130322013059.L3m_MO_CHL_chlor_a_9km','l3m_data' ));
 feb(feb == -32767) = NaN;
 feb_log = log10(feb);
-Y=0:2159;
-X=0:4319;
+Y = 0:2159;
+X = 0:4319;
 incr = 360/4320;
 [x,y]=meshgrid(X,Y);
 chl_lat =   90 - y*incr - incr/2;
@@ -21,28 +21,28 @@ chl_lon = -180 + x*incr + incr/2;
 Contours=[0.1 0.3 1 3 10];
 
 %total alkalinity data
-TA_file=xlsread('TA.xlsx');
-sTA=TA_file(:,4);
-TA_lat=TA_file(:,2);
-TA_lon=TA_file(:,3);
+TA_file = xlsread('TA.xlsx');
+sTA = TA_file(:,4);
+TA_lat = TA_file(:,2);
+TA_lon = TA_file(:,3);
 
 %carbon system data
-pCO2_file=xlsread('pCO2.xlsx');
-pCO2=pCO2_file(:,4);
-pCO2_lat=pCO2_file(:,2);
-pCO2_lon=pCO2_file(:,3);
-Sal=pCO2_file(:,5);
-Omega_file=xlsread('Omega.xlsx');
-Omega=Omega_file(:,4);
-Omega_lat=Omega_file(:,2);
-Omega_lon=Omega_file(:,3);
+pCO2_file = xlsread('pCO2.xlsx');
+pCO2 = pCO2_file(:,4);
+pCO2_lat = pCO2_file(:,2);
+pCO2_lon = pCO2_file(:,3);
+Sal = pCO2_file(:,5);
+Omega_file = xlsread('Omega.xlsx');
+Omega = Omega_file(:,4);
+Omega_lat = Omega_file(:,2);
+Omega_lon = Omega_file(:,3);
 
 
 %--------------------------------------------------------------------------
 %sea ice DEC 1
 
 m_proj('stereographic','lat',-75,'long',180,'radius',6.5,'rec','on')
-h=m_pcolor(lon_ice,lat_ice,Dec1_ice)
+h = m_pcolor(lon_ice,lat_ice,Dec1_ice)
 set(h, 'EdgeColor', 'none')
 m_gshhs_i('patch',[.85 .85 .85])
 
@@ -52,10 +52,9 @@ m_grid('linestyle','-','linewidth',0.4,'box','on','tickdir','in',...
 m_gshhs_i('line','color','k')
 
 %custom colorbar
-h=colorbar
-mycolor=[0 0 255; 8	48 107; 8 81 156;33	113	181;66 146 198;
-    107	174	214;158	202	225;198	219	239;222	235	247;247	251	255;]
-mycolor2=mycolor/255
+h = colorbar
+mycolor = [0 0 255; 8 48 107; 8 81 156;33 113 181;66 146 198; 107 174 214;158 202 225;198 219 239;222 235 247;247 251 255;]
+mycolor2 = mycolor / 255
 colormap(mycolor2)
 m_text(167,-70.5,'a','fontsize',30)
 set(gca,'FontSize',20)
