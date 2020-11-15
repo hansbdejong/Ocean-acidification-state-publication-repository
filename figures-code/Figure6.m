@@ -1,15 +1,15 @@
-%Plot figure 6
+% Plot figure 6
 
-%changes directory
+% changes directory
 cd('C:\')
 
 %loads data
-B=xlsread('Omega_sDIC_SO');
-C=xlsread('TA_SO');
-sTA=C(:,5);
-sTA_lat=C(:,2);
-sDIC=B(:,7);
-sDIC_lat=B(:,2);
+B = xlsread('Omega_sDIC_SO');
+C = xlsread('TA_SO');
+sTA = C(:,5);
+sTA_lat = C(:,2);
+sDIC = B(:,7);
+sDIC_lat = B(:,2);
 
 axes('Position',[0.25, 0.1, 0.5, 0.8])
 
@@ -74,5 +74,3 @@ text(-74,2305,'b','fontsize',15,'horizontalalignment','center',...
     'verticalalignment','bottom')
 xlim([-75 -55])
 set(gca,'Color','None')
-
-
