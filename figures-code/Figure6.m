@@ -1,7 +1,7 @@
 %Plot figure 6
 
 %changes directory
-cd('C:\Users\hansb\Desktop\1. Ocean acidification paper\OA figures\SO_Graphs_fig_4_5_6')
+cd('C:\')
 
 %loads data
 B=xlsread('Omega_sDIC_SO');
