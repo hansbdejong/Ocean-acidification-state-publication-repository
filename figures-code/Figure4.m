@@ -1,24 +1,24 @@
-%Plots figure 4
+% Plots figure 4
 
 % changes directory
 cd('C:\...')
 
 %inport data
-A=xlsread('Omega_sDIC_SO');
-B=xlsread('pCO2_SO');
-C=xlsread('SO_T_S');
-D=xlsread('UWPOC');
+A = xlsread('Omega_sDIC_SO');
+B = xlsread('pCO2_SO');
+C = xlsread('SO_T_S');
+D = xlsread('UWPOC');
 
-temp=C(:,5);
-temp_lat=C(:,3);
-omega=A(:,5);
-omega_lat=A(:,2);
-pCO2=B(:,4);
-pCO2_lat=B(:,2);
-POC=D(:,6);
-POC_lat=D(:,5);
-sal=C(:,6);
-sal_lat=C(:,3);
+temp = C(:,5);
+temp_lat = C(:,3);
+omega = A(:,5);
+omega_lat = A(:,2);
+pCO2 = B(:,4);
+pCO2_lat = B(:,2);
+POC = D(:,6);
+POC_lat = D(:,5);
+sal = C(:,6);
+sal_lat = C(:,3);
 
 %--------------------------------------------------------------------------
 %Plot The Polar Fronts
